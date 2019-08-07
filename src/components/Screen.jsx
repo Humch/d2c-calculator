@@ -15,8 +15,8 @@ Screen.propTypes = {
   ).isRequired,
 };
 
-const mstp = ({ firstScreen }) => ({
-  firstScreen: firstScreen.firstScreen,
+const mstp = ({ calculator }) => ({
+  firstScreen: calculator.firstScreen,
 });
 
 export default connect(mstp)(Screen);

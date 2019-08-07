@@ -3,6 +3,7 @@ import React from 'react';
 import '../css/App.css';
 
 import {
+  CButton,
   CEButton,
   DeleteButton,
   NumberButton,
@@ -23,7 +24,7 @@ const App = () => (
         <CEButton />
       </div>
       <div className="col-3 red-border">
-        <button type="button" className="btn btn-primary btn-block">C</button>
+        <CButton />
       </div>
     </div>
     <div className="mt-3 row">

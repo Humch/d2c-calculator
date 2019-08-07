@@ -32,6 +32,7 @@ export default (state = initialState, action) => {
         firstScreen: newfirstScreen,
       };
     }
+    case 'ERASE_ALL':
     case 'DEL_FIRST_SCREEN': {
       return {
         ...state,

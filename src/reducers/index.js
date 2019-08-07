@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import firstScreenReducer from './firstScreen';
+import calculatorReducer from './calculator';
 
 export default combineReducers({
-  firstScreen: firstScreenReducer,
+  calculator: calculatorReducer,
 });
