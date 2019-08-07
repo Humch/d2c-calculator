@@ -6,6 +6,7 @@ import {
   CButton,
   CEButton,
   DeleteButton,
+  EqualButton,
   InverseButton,
   NumberButton,
   OperandeButton,
@@ -59,7 +60,7 @@ const App = () => (
         <OperandeButton operande="-" />
       </div>
       <div className="col-2">
-        <button type="button" className="btn btn-primary btn-block maxi">=</button>
+        <EqualButton />
       </div>
     </div>
     <div className="mt-3 row under-div">

@@ -3,6 +3,7 @@ import clickNumber from './clickNumber';
 import deleteNumber from './deleteNumber';
 import delFirstScreen from './delFirstScreen';
 import eraseAll from './eraseAll';
+import finishOperation from './finishOperation';
 import inverseNumber from './inverseNumber';
 
 export {
@@ -11,5 +12,6 @@ export {
   deleteNumber,
   delFirstScreen,
   eraseAll,
+  finishOperation,
   inverseNumber,
 };

@@ -98,6 +98,40 @@ export default (state = initialState, action) => {
         firstScreen: newfirstScreen,
       };
     }
+    case 'FINISH_OPERATION': {
+      const newFirstScreen = [...state.firstScreen];
+
+      const actualOperande = state.operande;
+
+      if (actualOperande === '/' && (parseFloat(newFirstScreen.join('')) === 0 || newFirstScreen.length === 0)) {
+        return {
+          ...state,
+        };
+      }
+      let newResult = state.result;
+
+      if (state.result === 0) {
+        newResult = parseFloat(newFirstScreen.join(''));
+      } else if (actualOperande === '+') {
+        newResult += parseFloat(newFirstScreen.join(''));
+      } else if (actualOperande === '-') {
+        newResult -= parseFloat(newFirstScreen.join(''));
+      } else if (actualOperande === 'x') {
+        newResult *= parseFloat(newFirstScreen.join(''));
+      } else if (actualOperande === '/') {
+        newResult /= parseFloat(newFirstScreen.join(''));
+      }
+
+      const firstScreenDisplay = (`${newResult}`).split('');
+
+      return {
+        ...state,
+        firstScreen: firstScreenDisplay,
+        secondScreen: '',
+        result: 0,
+        operande: '',
+      };
+    }
     default:
       return state;
   }
