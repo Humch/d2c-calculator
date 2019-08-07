@@ -6,6 +6,7 @@ import {
   CButton,
   CEButton,
   DeleteButton,
+  InverseButton,
   NumberButton,
   OperandeButton,
 } from '../containers';
@@ -41,7 +42,7 @@ const App = () => (
         <OperandeButton operande="+" />
       </div>
       <div className="col-2">
-        <button type="button" className="btn btn-primary btn-block center-text">+/-</button>
+        <InverseButton />
       </div>
     </div>
     <div className="mt-3 row over-div">

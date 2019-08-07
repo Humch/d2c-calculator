@@ -83,6 +83,21 @@ export default (state = initialState, action) => {
       }
       return { ...state };
     }
+    case 'INVERSE_NUMBER': {
+      const newfirstScreen = [...state.firstScreen];
+      const control = parseFloat(newfirstScreen.join(''));
+
+      if (control < 0) {
+        newfirstScreen.shift();
+      } else if (control > 0) {
+        newfirstScreen.unshift('-');
+      }
+
+      return {
+        ...state,
+        firstScreen: newfirstScreen,
+      };
+    }
     default:
       return state;
   }
